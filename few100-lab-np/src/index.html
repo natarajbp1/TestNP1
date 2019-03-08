@@ -4,68 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculator</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
 
 <body>
-    <div class="panel-heading">
-        <h1 class="panel-title">Tip Calculator</h1>
-    </div>
-    <div>
-        <div>
-            <label class="label label-primary">$</label>
-            <input type="number"
-                   id="billInput"
-                   class="form-control">
+    <form class="form-horizontal">
+        <div class="container">
+            <div class="panel panel-primary">
+                <div class="panel panel-heading">
+                    <div class="col-md-offset-1">
+                        <h1 class="panel-title">Tip Calculator</h1>
+                    </div>
+                </div>
+                <div class="container">
+                    <div>
+                        <div class="panel panel-secondary">
+                            <table>
+                                <tr>
+                                    <td> <input type="button"
+                                               class="btn btn-secondary"
+                                               value="$"></td>
+                                    <td><input type="number"
+                                               id="billInput"
+                                               class="form-control"
+                                               style="width: 250px"></td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div>
+                            <button type="button"
+                                    class="btn btn-secondary"
+                                    value="10"
+                                    id="tip10">10%</button>
+                            <button type="button"
+                                    class="btn btn-secondary"
+                                    value="20"
+                                    id="tip20">20%</button>
+                            <button type="button"
+                                    class="btn btn-secondary"
+                                    value="30"
+                                    id="tip30">30%</button>
+
+                        </div>
+                        <div>
+                            You are tipping <label id="tipPercent"></label> %
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="container">
+                        <table class="table table-bordered table-hover">
+                            <tr>
+                                <td>
+                                    Bill Amount : $<label id="billAmount"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Tip Percentage : <label id="billTipPercent"></label>%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Ammount of tip : $<label id="billAmountTip"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Total to be Paid : $<label id="billAmountTotal"></label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <button type="button"
-                    class="btn btn-secondary"
-                    value="10"
-                    id="tip10">10%</button>
-            <button type="button"
-                    class="btn btn-secondary"
-                    value="20"
-                    id="tip20">20%</button>
-            <button type="button"
-                    class="btn btn-secondary"
-                    value="30"
-                    id="tip30">30%</button>
-
-        </div>
-        <div>
-            You are tipping <label id="tipPercent"></label> %
-        </div>
-
-        <div>
-            <table>
-                <tr>
-                    <td>
-                        Bill Amount : $<label id="billAmount"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Tip Percentage : <label id="billTipPercent"></label>%
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Ammount of tip : $<label id="billAmountTip"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Total to be Paid : $<label id="billAmountTotal"></label>
-                    </td>
-                </tr>
-            </table>
-
-
-
-
-
-        </div>
-    </div>
+    </form>
 </body>
 
 </html>

@@ -1,3 +1,9 @@
 h1 {
     color:black;
 }
+.currencyinput {
+    border: 1px inset #ccc;
+}
+.currencyinput input {
+    border: 0;
+}
