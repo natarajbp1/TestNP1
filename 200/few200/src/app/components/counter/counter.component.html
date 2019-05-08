@@ -1,5 +1,6 @@
 <div>
   <input type="button"
+         [disabled]="decrementDisabled$ | async"
          class="btn btn-sm"
          (click)="decrement()"
          value="-">
@@ -8,4 +9,27 @@
          class="btn btn-sm"
          (click)="increment()"
          value="+">
+  <input type="button"
+         class="btn btn-primary"
+         (click)="reset()"
+         value="Reset">
+</div>
+<div class="btn-group"
+     role="group">
+  <table>
+    <tr>
+      <td><button type="button"
+                class="btn btn-secondary"
+                [disabled]="(by$ | async)===1"
+                (click)="setCount(1)">by 1</button></td>
+      <td><button type="button"
+                class="btn btn-secondary"
+                [disabled]="(by$ | async)===3"
+                (click)="setCount(3)">by 3</button></td>
+      <td><button type="button"
+                class="btn btn-secondary"
+                [disabled]="(by$ | async)===5"
+                (click)="setCount(5)">by 5</button></td>
+    </tr>
+  </table>
 </div>
