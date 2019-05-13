@@ -1,6 +1,18 @@
-<ul class="list-unstyled">
-  <li class="alert alert-info"
-      *ngFor="let book of books">
-    {{book.title}}
-  </li>
-</ul>
+<table class="table table-striped table-sm">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Format</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of books">
+      <td>{{book.id}}</td>
+      <td>{{book.title}}</td>
+      <td>{{book.author}}</td>
+      <td>{{book.format}}</td>
+    </tr>
+  </tbody>
+</table>

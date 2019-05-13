@@ -10,7 +10,7 @@ export const reducers = {
 };
 
 // 1. Feature Selector
-const selectFeature = createFeatureSelector<State>('bookcollectionFeature');
+const selectFeature = createFeatureSelector<State>('bookFeature');
 
 // 2. A Selector for each "branch" of that feature.
 const selectBookBranch = createSelector(selectFeature, f => f.books);

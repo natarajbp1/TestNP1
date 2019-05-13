@@ -1,7 +1,7 @@
 import { Action } from '@ngrx/store';
 import { BookItem } from '../model';
 
-let maxId = 999;
+let maxId = 1;
 export const BOOK_ADDED = '[book] book added';
 export class AddedBook implements Action {
   readonly type = BOOK_ADDED;

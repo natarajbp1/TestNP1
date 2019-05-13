@@ -10,7 +10,7 @@ import { reducers } from './reducers';
   declarations: [BookcollectionComponent, EntryComponent, ListComponent],
   imports: [
     CommonModule,
-    StoreModule.forFeature('bookfeature', reducers)
+    StoreModule.forFeature('bookFeature', reducers)
   ],
   exports: [BookcollectionComponent]
 })
